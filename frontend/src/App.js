@@ -1,9 +1,11 @@
+import { BrowserRouter, Route } from 'react-router-dom';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
-import data from './data';
-import Product from './components/Product';
+import HomePage from './Pages/HomePage';
+import ProductPage from './Pages/ProductPage';
 
 function App() {
   return (
+    <BrowserRouter> 
      <div className="grid-container">
       <header className="row">
         <div>
@@ -17,17 +19,13 @@ function App() {
         </div>
       </header>
       <main>
-        <div>
-          <div className="row center">
-              {data.product.map(product =>(
-                <Product key={product._id} product={product}></Product>
-                ))}
-   
-        </div>
-        </div>
+        <Route path="/product/:id" component={ProductPage}></Route>
+        <Route path="/" component={HomePage} exact></Route>
+      
       </main>
       <footer className="row center">All right reserved</footer>
     </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,5 +1,7 @@
+import Rating from "./Rating"; 
+
 export default function Product(props){
-     
+    
     const {product} =props 
     
     return(
@@ -13,25 +15,12 @@ export default function Product(props){
     </a>
     <div className="card-body">
       <a href={`/product/${product._id}`}>
-        <h2>{product.name}</h2>
+      <h2>{product.name}</h2>
       </a>
-      <div className="rating">
-        <span>
-          <i className="fa fa-star"></i>
-        </span>
-        <span>
-          <i className="fa fa-star"></i>
-        </span>
-        <span>
-          <i className="fa fa-star"></i>
-        </span>
-        <span>
-          <i className="fa fa-star"></i>
-        </span>
-        <span>
-          <i className="fa fa-star"></i>
-        </span>
-      </div>
+      <Rating  
+        rating={product.rating}
+        numReviews={product.numReviews}
+      />
       <div className="price">R${product.price}</div>
     </div>
     </div>
