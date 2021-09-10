@@ -1,3 +1,6 @@
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+import data from './data';
+import Product from './components/Product';
 
 function App() {
   return (
@@ -5,7 +8,7 @@ function App() {
       <header className="row">
         <div>
           <a className="brand" href="/">
-            amazona
+            E-commerce
           </a>
         </div>
         <div>
@@ -16,41 +19,11 @@ function App() {
       <main>
         <div>
           <div className="row center">
-            
-              <div key={} className="card">
-                <a href={}>
-                  <img
-                    className="medium"
-                    src={}
-                    alt={}
-                  />
-                </a>
-                <div className="card-body">
-                  <a href={`/product/`}>
-                    <h2>{}</h2>
-                  </a>
-                  <div className="rating">
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                    <span>
-                      <i className="fa fa-star"></i>
-                    </span>
-                  </div>
-                  <div className="price"></div>
-                </div>
-              </div>
-          
-          </div>
+              {data.product.map(product =>(
+                <Product key={product._id} product={product}></Product>
+                ))}
+   
+        </div>
         </div>
       </main>
       <footer className="row center">All right reserved</footer>
