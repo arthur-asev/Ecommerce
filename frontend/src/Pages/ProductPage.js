@@ -58,7 +58,7 @@ export default function ProductPage(props) {
                                 {product.countInStock>0? (
                                 <span className="success">Em estoque</span>
                                 ):(
-                                <span className="error">Produto Indisponivel</span>
+                                <span className="danger">Produto Indisponivel</span>
                                 )}
                                 </div>
                             </div>
