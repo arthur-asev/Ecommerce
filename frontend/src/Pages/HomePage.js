@@ -6,16 +6,11 @@ import Product from '../components/Product';
 
 export default function HomePage() {
 
-
-    
     const [products,setProducts] = useState([]);
-
     const [loading,setLoading] = useState (false);
     const [error,setError] = useState (false);
 
    
-
-
     useEffect(() => {
        const fetchData = async ()=>{
         try {
