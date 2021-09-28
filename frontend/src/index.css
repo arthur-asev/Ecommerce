@@ -77,10 +77,7 @@ li {
   margin-top: 1rem;
 }
 
-input,
-select,
-textarea,
-button {
+input, select, textarea, button {
   padding: 1rem;
   border-radius: 0;
   border: 0.1rem #a4a4a4 solid;
@@ -96,10 +93,7 @@ button.primary {
   background-color: #f0c040;
 }
 
-input:hover,
-select:hover,
-textarea:hover,
-button:hover {
+input:hover, select:hover, textarea:hover, button:hover {
   border: 0.1rem #404040;
 }
 
@@ -118,6 +112,15 @@ a.brand {
   color: #ffffff;
   font-size: 3rem;
   font-weight: bold;
+}
+
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
 }
 
 .row {
@@ -196,18 +199,17 @@ img.medium {
   color: #a02020;
 }
 
-.alert{
+.alert {
   padding: 1rem;
   border: 0.1rem solid transparent;
   border-radius: 0.5rem;
-
 }
 
-.alert-info{
+.alert-info {
   color: #2020a0;
   background-color: #e0e0ff;
 }
 
-.alert-info{
+.alert-info {
   color: #ffe0e0e0;
 }
