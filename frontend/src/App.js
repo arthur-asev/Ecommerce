@@ -1,5 +1,6 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+import CartPage from './Pages/CartPage';
 import HomePage from './Pages/HomePage';
 import ProductPage from './Pages/ProductPage';
 
@@ -19,6 +20,7 @@ function App() {
         </div>
       </header>
       <main>
+        <Route path="/cart/:id?" component={CartPage}></Route>
         <Route path="/product/:id" component={ProductPage}></Route>
         <Route path="/" component={HomePage} exact></Route>
       
