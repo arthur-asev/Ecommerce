@@ -15,8 +15,6 @@ export default function HomePage() {
     dispatch(listProducts());
   }, [dispatch]);
 
-  console.log(dispatch);
-
   return (
     <div>
       {loading ? (

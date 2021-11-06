@@ -200,6 +200,12 @@ img.small {
   color: #171818;
 }
 
+/*Alert*/
+
+.loading {
+  display: block !important;
+}
+
 .success {
   color: #20a020;
 }
@@ -223,4 +229,26 @@ img.small {
   color: #ffe0e0e0;
 }
 
+/*Dropdown */
 
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  margin: 0;
+  background-color: #171818;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
