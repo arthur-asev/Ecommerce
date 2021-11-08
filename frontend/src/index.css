@@ -252,3 +252,18 @@ img.small {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/*Checkout steps*/
+
+.checkout-steps>div {
+  border-top: 0.3rem solid white;
+  color: white;
+  font-weight: bold;
+  flex: 1;
+  padding: 1rem;
+}
+
+.checkout-steps>div.active {
+  border-top-color: orange;
+  color: orange;
+}
