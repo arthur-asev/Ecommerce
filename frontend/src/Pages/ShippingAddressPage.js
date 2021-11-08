@@ -7,16 +7,16 @@ export default function ShippingAddressPage(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const cart = useSelector((state) => state.cart);
-  const { ShippingAddress } = cart;
+  const { shippingAddress } = cart;
   if (!userInfo) {
     props.history.push("/signin");
   }
 
-  const [fullName, setFullName] = useState(ShippingAddress.fullName);
-  const [address, setAddress] = useState(ShippingAddress.address);
-  const [city, setCity] = useState(ShippingAddress.city);
-  const [postalCode, setPostalCode] = useState(ShippingAddress.postalCode);
-  const [country, setCountry] = useState(ShippingAddress.country);
+  const [fullName, setFullName] = useState(shippingAddress.fullName);
+  const [address, setAddress] = useState(shippingAddress.address);
+  const [city, setCity] = useState(shippingAddress.city);
+  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
+  const [country, setCountry] = useState(shippingAddress.country);
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ export default function ShippingAddressPage(props) {
           <h1>Endereço de entrega</h1>
         </div>
         <div>
-          <label htmlFor="fullname">Nome completo</label>
+          <label htmlFor="fullName">Nome completo</label>
           <input
             type="text"
             id="fullName"
@@ -67,7 +67,7 @@ export default function ShippingAddressPage(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor="postalcode">Código Postal</label>
+          <label htmlFor="postalCode">Código Postal</label>
           <input
             type="text"
             id="postalCode"
@@ -91,7 +91,7 @@ export default function ShippingAddressPage(props) {
         <div>
           <label></label>
           <button className="primary" type="submit">
-            Contunuar
+            Continuar
           </button>
         </div>
       </form>

@@ -4,6 +4,7 @@ import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
 import { signout } from "./actions/userActions";
 import CartPage from "./Pages/CartPage";
 import HomePage from "./Pages/HomePage";
+import PaymentMethodPage from "./Pages/PaymentMethodPage";
 import ProductPage from "./Pages/ProductPage";
 import RegisterPage from "./Pages/RegisterPage";
 import ShippingAddressPage from "./Pages/ShippingAddressPage";
@@ -59,6 +60,7 @@ function App() {
           <Route path="/signin" component={SigninPage}></Route>
           <Route path="/register" component={RegisterPage}></Route>
           <Route path="/shipping" component={ShippingAddressPage}></Route>
+          <Route path="/payment" component={PaymentMethodPage}></Route>
         </main>
         <footer className="row center">All right reserved</footer>
       </div>
