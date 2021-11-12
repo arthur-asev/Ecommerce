@@ -2,11 +2,15 @@ import React from "react";
 
 export default function CheckoutSteps(props) {
   return (
-    <div className="row checkout-steps">
+    <div className="checkout-steps">
       <div className={props.step1 ? "active" : ""}>Signin</div>
+      <div className={props.step1 ? "active bolinha" : "bolinhaoff"}></div>
       <div className={props.step2 ? "active" : ""}>Shipping</div>
+      <div className={props.step2 ? "active bolinha" : "bolinhaoff"}></div>
       <div className={props.step3 ? "active" : ""}>Payment</div>
+      <div className={props.step3 ? "active bolinha" : "bolinhaoff"}></div>
       <div className={props.step4 ? "active" : ""}>Place Order</div>
+      <div className={props.step4 ? "active bolinha" : "bolinhaoff"}></div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { signout } from "./actions/userActions";
 import CartPage from "./Pages/CartPage";
 import HomePage from "./Pages/HomePage";
 import PaymentMethodPage from "./Pages/PaymentMethodPage";
+import PlaceOrderPage from "./Pages/PlaceOrderPage";
 import ProductPage from "./Pages/ProductPage";
 import RegisterPage from "./Pages/RegisterPage";
 import ShippingAddressPage from "./Pages/ShippingAddressPage";
@@ -21,8 +22,19 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <div className="grid-container">
-        <header className="row">
+      <div className=" grid-container">
+        <div className="nav-mobile">
+          <div>
+            <Link className="brand" to="/">
+              E-commerce
+            </Link>
+          </div>
+          <button>
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <header className="nav-bar row">
           <div>
             <Link className="brand" to="/">
               E-commerce
@@ -53,6 +65,7 @@ function App() {
             )}
           </div>
         </header>
+
         <main>
           <Route path="/cart/:id?" component={CartPage}></Route>
           <Route path="/product/:id" component={ProductPage}></Route>
@@ -61,6 +74,7 @@ function App() {
           <Route path="/register" component={RegisterPage}></Route>
           <Route path="/shipping" component={ShippingAddressPage}></Route>
           <Route path="/payment" component={PaymentMethodPage}></Route>
+          <Route path="/placeorder" component={PlaceOrderPage}></Route>
         </main>
         <footer className="row center">All right reserved</footer>
       </div>

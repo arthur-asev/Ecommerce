@@ -14,3 +14,24 @@ export const generateToken = (user) => {
     }
   );
 };
+
+export const isAuth = (req, res, next) => {
+  const authorization = req.headers.authorization;
+  if (authorization) {
+    const token = authorization.slice(7, authorization.lenght);
+    jwt.verify(
+      token,
+      process.env.JWT_SECRET || "somethingsecret",
+      (err, decode) => {
+        if (err) {
+          req.res(401).send({ message: "Token inválido" });
+        } else {
+          req.user = decode;
+          next();
+        }
+      }
+    );
+  } else {
+    req.res(401).send({ message: "Não há token" });
+  }
+};

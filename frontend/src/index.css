@@ -255,15 +255,82 @@ img.small {
 
 /*Checkout steps*/
 
+.checkout-steps {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
 .checkout-steps>div {
-  border-top: 0.3rem solid white;
-  color: white;
+  border-top: 0.3rem solid rgb(146, 146, 146);
+  color: rgb(172, 169, 169);
   font-weight: bold;
   flex: 1;
   padding: 1rem;
 }
 
+div.bolinha {
+  max-width: 1.2rem;
+  max-height: 1.7rem;
+  position: relative;
+  border-top: none;
+  bottom: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  background-color: #26c517;
+  border-radius: 50%;
+}
+
+div.bolinhaoff {
+  max-width: 1.2rem;
+  max-height: 1rem;
+  position: relative;
+  border-top: none;
+  bottom: 0.4rem;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  background-color: #afafaf;
+  border-radius: 50%;
+}
+
 .checkout-steps>div.active {
-  border-top-color: orange;
-  color: orange;
+  border-top-color: rgb(65, 253, 90);
+  color: rgb(26, 214, 142);
+}
+
+.nav-mobile {
+  display: none;
+  width: 100%;
+  background-color: #73d1d1;
+}
+
+.nav-mobile :nth-child(1) {
+  padding: 0.5rem 1rem;
+}
+
+.nav-mobile button {
+  margin: 0;
+  border: 0;
+  background-color: blue;
+  cursor: pointer;
+}
+
+@media screen and (max-width:500px) {
+  .checkout-steps {
+    width: 100%;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .nav-bar {
+    display: none;
+  }
+  .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+  }
 }
