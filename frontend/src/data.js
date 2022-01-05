@@ -1,85 +1,67 @@
 const data = {
-
-    products:[
-        {
-            _id:'1',
-            name:'camisa branca',
-            category:'camisas',
-            image:'/images/p2.jpg',
-            price: 120,
-            countInStock:14,
-            brand: 'Nike',
-            rating: 1.5,
-            numReviews: 17,
-            description: 'produto de alta qualidade'
-
-
-        },
-        {
-            _id:'2',
-            name:'camisa preta',
-            category:'camisas',
-            image:'/images/p2.jpg',
-            price: 120,
-            countInStock:50,
-            brand: 'Nike',
-            rating: 2.5,
-            numReviews: 1,
-            description: 'produto de alta qualidade'
-
-
-        },
-        {
-            _id:'3',
-            name:'camisa amarela',
-            category:'camisas',
-            image:'/images/p2.jpg',
-            price: 120,
-            countInStock:10,
-            brand: 'Nike',
-            rating: 4.5,
-            numReviews: 60,
-            description: 'produto de alta qualidade'
-
-
-        },
-        {
-            _id:'4',
-            name:'camisa azul',
-            category:'camisas',
-            image:'/images/p2.jpg',
-            price: 200,
-            countInStock:0,
-            brand: 'Lacoste',
-            rating: 4.5,
-            numReviews: 0,
-            description: 'produto de alta qualidade'
-
-
-        },
-        {
-            _id:'5',
-            name:'camisa verde',
-            category:'camisas',
-            image:'/images/p2.jpg',
-            price: 300,
-            countInStock:20,
-            brand: 'Oakley',
-            rating: 4.5,
-            numReviews: 5,
-            description: 'produto de alta qualidade'
-
-
-        },
-
-
-
-
-    ]
-
-
-
-
-
+  products: [
+    {
+      _id: "1",
+      name: "camisa branca Lacoste",
+      category: "camisas",
+      image: "/images/lp.jpg",
+      price: 220,
+      countInStock: 14,
+      brand: "Lacoste",
+      rating: 1.5,
+      numReviews: 17,
+      description:
+        " camisa lacoste branca 100% algodão produto de alta qualidade",
+    },
+    {
+      _id: "2",
+      name: "camisa cinza Lacoste",
+      category: "camisas",
+      image: "/images/lp1.jpg",
+      price: 320,
+      countInStock: 50,
+      brand: "Lacoste",
+      rating: 2.5,
+      numReviews: 1,
+      description:
+        "camisa lacoste cinza 100% algodão produto de alta qualidade",
+    },
+    {
+      _id: "3",
+      name: "moletom majin boo ",
+      category: "moletons",
+      image: "/images/md.jpg",
+      price: 200,
+      countInStock: 10,
+      brand: "indefinida",
+      rating: 4.5,
+      numReviews: 60,
+      description: "produto de alta qualidade",
+    },
+    {
+      _id: "4",
+      name: "moleton preto",
+      category: "moletons",
+      image: "/images/mp.jpg",
+      price: 200,
+      countInStock: 0,
+      brand: "indefinido",
+      rating: 4.5,
+      numReviews: 0,
+      description: "produto de alta qualidade",
+    },
+    {
+      _id: "5",
+      name: "camisa verde",
+      category: "camisas",
+      image: "/images/p2.jpg",
+      price: 300,
+      countInStock: 20,
+      brand: "Oakley",
+      rating: 4.5,
+      numReviews: 5,
+      description: "produto de alta qualidade",
+    },
+  ],
 };
 export default data;

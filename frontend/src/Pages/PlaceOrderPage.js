@@ -2,6 +2,7 @@ import React from "react";
 import CheckoutSteps from "../components/CheckoutSteps";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { createOrder } from "../actions/orderActions";
 
 export default function PlaceOrderPage(props) {
   const cart = useSelector((state) => state.cart);
@@ -17,7 +18,7 @@ export default function PlaceOrderPage(props) {
   cart.totalPrice = cart.itemsPrice + cart.shippingPrice + cart.taxPrice;
   const dispatch = useDispatch();
   const placeOrderHandler = () => {
- dispatch(createOrder({...cart,orderItems:cart.cartItems})),
+    dispatch(createOrder({ ...cart, orderItems: cart.cartItems }));
   };
 
   return (
