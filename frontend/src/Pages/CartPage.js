@@ -12,7 +12,6 @@ export default function CartPage(props) {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (productId) {
       dispatch(addToCart(productId, qty));
@@ -24,7 +23,7 @@ export default function CartPage(props) {
   };
 
   const checkoutHandler = () => {
-    props.history.push("signin?redirect=shipping");
+    props.history.push("/signin?redirect=/shipping");
   };
 
   return (
