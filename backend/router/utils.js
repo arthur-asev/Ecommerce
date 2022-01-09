@@ -24,15 +24,16 @@ export const isAuth = (req, res, next) => {
       process.env.JWT_SECRET || "somethingsecret",
       (err, decode) => {
         if (err) {
-          req.res(401).send({ message: "Token inválido" });
+          res.res(401).send({ message: "Token inválido" });
         } else {
+          ``;
           req.user = decode;
           next();
         }
       }
     );
   } else {
-    req.res(401).send({ message: "Não há token" });
+    res.status(401).send({ message: "Não há token" });
   }
 };
 export const isAdmin = (req, res, next) => {

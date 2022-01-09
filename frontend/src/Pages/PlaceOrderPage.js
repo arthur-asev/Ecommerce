@@ -139,7 +139,7 @@ export default function PlaceOrderPage(props) {
                   Fazer pedido
                 </button>
               </li>
-              {loading && <LoadingBox></LoadingBox>}{" "}
+              {loading && <LoadingBox></LoadingBox>}
               {error && <MessageBox variant="danger">{error}</MessageBox>}
             </ul>
           </div>
